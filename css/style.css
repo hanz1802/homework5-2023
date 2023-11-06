@@ -44,8 +44,6 @@ a, a:visited{
 }
 /* Edit the css for the card */
 .card{
-    /* display: flex;
-    flex-direction: column; */
     flex-basis: 450px;
     border-radius: 50px 50px 0 0;
 }
@@ -70,8 +68,9 @@ a, a:visited{
     flex-wrap: wrap;
     justify-content: center;
 }
-
+/* when the screen-size is greater than 900px */
 @media screen and (min-width: 900px){
+    /* Edit the css for the header tag (all instances) and the nav_links class to match our example using flex-properties */
     header{
         display: flex;
         flex-direction: row;
@@ -83,22 +82,29 @@ a, a:visited{
         display: flex;
         flex-direction: row;
     }
-
+    /* Edit the css for the pricing and card classes to match our example. */
+    .pricing {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .card{
         flex-basis: 275px;
     }
-
+    /* Modify the first header (the one not inside main) so that it remains visible at the top of the screen even as we scroll down */
     body > header:first-of-type{
         position: sticky;
         top: 0;
     }
 }
+/* The logo class should appear but not be animated if prefers-reduced-motion is selected in the accessibility preferences.  */
 @media screen and (prefers-reduced-motion: reduce) {
     #logo {
       animation: none; 
     }
 }
-
+/* when the page is printed in portrait mode.   */
 @media print and (orientation: portrait){
     /* Change the font on your body to Arial with a backup value of  Helvetica.  
     The background image should be removed. */
@@ -106,10 +112,7 @@ a, a:visited{
         font-family: Arial, Helvetica;
         background-image: none;
     }
-
-
 /* Edit the nav/nav_links elements so that they are spaced according to the image above. */
-
     nav {
         width: 100%;
     }
@@ -132,12 +135,10 @@ a, a:visited{
         border: solid 2px #45ADDD;
         flex-basis: 325px;
     }
-
-    
+    /* No part of the gallery should be visible. */
     .gallery, #gallery{
         display: none;
     }
-
     /* Without using list-style-type add the thumbs up entity as shown in the cards. This is a challenge problem. You should not give or receive help when completing it.**For some people the thumbs up is not printing as yellow. That is fine. */ 
     .card li:nth-child(2)::after{
         content: "\1F44D";
