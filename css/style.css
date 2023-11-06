@@ -44,8 +44,8 @@ a, a:visited{
 }
 /* Edit the css for the card */
 .card{
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     flex-basis: 450px;
     border-radius: 50px 50px 0 0;
 }
@@ -109,24 +109,15 @@ a, a:visited{
 
 
 /* Edit the nav/nav_links elements so that they are spaced according to the image above. */
-    body > header:first-of-type{
-        display: block;
-        margin: auto;
-        text-align: center;
+
+    nav {
+        width: 100%;
     }
-/* 
-    #img_logo{
-        display: block;
-        margin: auto;
-    } */
- 
     .nav_links{
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-       
-      
     }
     /* Edit the pricing class so that the elements align along the bottom.  As long as it aligns along the bottom we don't care if the cards aren't the same height. */
     .pricing{
@@ -149,7 +140,7 @@ a, a:visited{
 
     /* Without using list-style-type add the thumbs up entity as shown in the cards. This is a challenge problem. You should not give or receive help when completing it.**For some people the thumbs up is not printing as yellow. That is fine. */ 
     .card li:nth-child(2)::after{
-        content: "👍";
+        content: "\1F44D";
     }
 
 }
